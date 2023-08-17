@@ -1,42 +1,48 @@
 <template>
-  <nav class="navbar" :class="{ 'blur-bg': !navIsOpen }">
-    <div>
+  <nav class="navbar" :class="{ 'blur-bg': navIsOpen === true }">
+    <div class="container-lg">
+
       <div>
-        <a class="navbar-brand logo green" href="#">
-          <img src="../assets/logo.svg" alt="logo" style="width: 60px">
-        </a>
+        <router-link class="navbar-brand logo green" href="#">
+          <img src="../assets/images/logo.svg" class-="logo" alt="logo">
+        </router-link>
       </div>
-    </div>
-    <div class="navi-items">
-      <button class="navbar-toggle" type="button" aria-label="Toggle navigation" 
-      :class="{ 'aside-color': navIsOpen }"
-      @click="toggleNav">
-        <span class="toggler-icon top-bar"
-        :class="{ 'top-icon-animate': navIsOpen }"></span>
-        <span class="toggler-icon middle-bar"
-        :class="{ 'middle-icon-animate': navIsOpen }"></span>
-        <span class="toggler-icon bottom-bar"
-        :class="{ 'bottom-icon-animate': navIsOpen }"></span>
-      </button>
-      <ul class= "navbar-navi">
+
+      <div class="navi-items">
+        <button class="navbar-toggle" type="button" aria-label="Toggle navigation" 
+        :class="{ 'aside-color': navIsOpen }"
+        @click="toggleNav">
+          <span class="toggler-icon top-bar"
+          :class="{ 'top-icon-animate': navIsOpen }"></span>
+          <span class="toggler-icon middle-bar"
+          :class="{ 'middle-icon-animate': navIsOpen }"></span>
+          <span class="toggler-icon bottom-bar"
+          :class="{ 'bottom-icon-animate': navIsOpen }"></span>
+        </button>
+        <ul class= "navbar-navi">
+          <li class="navbar-item">
+            <router-link class="navbar-link" href="#">Individual</router-link>
+          </li>
+          <li class="navbar-item">
+            <router-link class="navbar-link" href="#">Business</router-link>
+          </li>
+          <li class="navbar-item">
+            <router-link class="navbar-link" href="#">Pricing</router-link>
+          </li>
+          <li class="navbar-item">
+            <router-link class="navbar-link" href="#">Set your payroll</router-link>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="buttons d-flex">
         <li class="navbar-item">
-          <a class="navbar-link mono" href="#AboutMe"><span class="green">01.</span>About</a>
+          <button class="btn btn1">Log in</button>
         </li>
         <li class="navbar-item">
-          <a class="navbar-link mono" href="#Experience"><span class="green">02.</span>Experience</a>
+          <button class="btn btn2">Register</button>
         </li>
-        <li class="navbar-item">
-          <a class="navbar-link mono" href="#Work"><span class="green">03.</span>Work</a>
-        </li>
-        <li class="navbar-item">
-          <a class="navbar-link mono" href="#Contact"><span class="green">04.</span>Contact</a>
-        </li>
-        <li class="navbar-item">
-          <a class="navbar-link mono" href="https://drive.google.com/uc?export=download&id=1fd_HaxnSHYA7tbPbswcMfFaOJKgIJ745">
-            <button class="btn">Resumé</button>
-          </a>
-        </li>
-      </ul>
+      </div>
     </div>
   </nav>
 
@@ -51,13 +57,16 @@
     v-show="navIsOpen"
   >
     <aside :class="{ 'leave-animation': !navIsOpen, 'invisible': clicked === 0, }">
-      <a class="navbar-link mono block light-slate" href="#AboutMe" @click="toggleNav"><span class="block green">01.</span>About</a>
-      <a class="navbar-link mono block light-slate" href="#Experience" @click="toggleNav"><span class="block green">02.</span>Experience</a>
-      <a class="navbar-link mono block light-slate" href="#Work" @click="toggleNav"><span class="block green">03.</span>Work</a>
-      <a class="navbar-link mono block light-slate" href="#Contact" @click="toggleNav"><span class="green block">04.</span>Contact</a>
-      <a class="navbar-link mono block light-slate" href="https://drive.google.com/uc?export=download&id=1fd_HaxnSHYA7tbPbswcMfFaOJKgIJ745" @click="toggleNav">
-      <button class="btn">Resumé</button>
-      </a>
+      <router-link class="navbar-link block light-slate" href="#" @click="toggleNav">Individual</router-link>
+      <router-link class="navbar-link block light-slate" href="#" @click="toggleNav">Business</router-link>
+      <router-link class="navbar-link block light-slate" href="#" @click="toggleNav">Pricing</router-link>
+      <router-link class="navbar-link block light-slate" href="#" @click="toggleNav">Set your payroll</router-link>
+      <router-link class="navbar-link block light-slate" href="#" @click="toggleNav">
+        <button class="btn btn1 mobile-btn">Log in</button>
+      </router-link>
+      <router-link class="navbar-link block light-slate" href="#" @click="toggleNav">
+        <button class="btn btn2">Register</button>
+      </router-link>
     </aside>
   </div>
 </template>
@@ -98,14 +107,13 @@ export default {
   position: relative;
 }
 nav {
-  background-color: #000;
-  color: #64ffda;
+  background-color: #FFF;
+  color: #515251;
   display: flex;
   justify-content: space-between;
   position: relative;
-  height: 80px;
   width: 100%;
-  padding: 1% 4% 2%;
+  padding: 1rem 0;
 }
 div.backdrop {
     position: fixed;
@@ -127,8 +135,8 @@ aside {
   height: 100vh;
   right: 0;
   top: 0;
-  background-color: #191919;
-  color: #64ffda;
+  background-color: #FFF;
+  color: #11453B;
   text-align: center;
   transform: translateX(1000px);
   z-index: 10;
@@ -137,12 +145,12 @@ aside {
   animation: show 0.5s linear forwards;
 }
 .aside-color {
-    background-color: #191919 !important;
+    background-color: #FFF !important;
     position: absolute;
 
 }
 aside button.btn {
-    background-color: #191919;
+    background-color: #FFF;
     font-size: 17px;
     padding: 3% 10% !important;
 }
@@ -171,8 +179,8 @@ aside button.btn {
 .show {
   animation: show 0.5s linear forwards;
 }
-a img {
-  animation: flip 2s ease-out forwards !important;
+.navbar-brand img {
+  width: 7rem;
   z-index: 1000;
 }
 @keyframes flip {
@@ -188,8 +196,13 @@ li {
   padding: 10px;
   text-decoration: none;
 }
+li.navbar-item {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
 button.navbar-toggle {
-  background-color: #000;
+  background-color: #FFF;
   border-style: none;
   display: none;
   position: relative;
@@ -206,36 +219,29 @@ span.top-bar {
 span.middle-bar {
   opacity: 1;
   filter: alpha(opacity=100);
-  width: 85%;
   border-radius: 32px;
 }
 span.bottom-bar {
   margin-top: 10px;
-  width: 70%;
   transform: rotate(0deg);
   border-radius: 32px;
 }
-ul.navbar-navi {
-  position: relative;
-  right: 30%;
+.navbar-link {
+  color: #515251;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
-li.navbar-item {
-  margin: 1% 3%;
-}
-a.navbar-link {
-  color: #8892b0;
-}
-a.navbar-link:hover {
-  color: #64ffda;
+.navbar-link:hover {
+  color: #11453B;
 }
 .toggler-icon {
   display: block;
   display: none;
   position: absolute;
-  height: 3px;
+  height: 2px;
   width: 100%;
-  background: #64ffda;
-  border-radius: 1px;
+  background: #11453B;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
@@ -268,65 +274,63 @@ a.navbar-link:hover {
   transform: translateY(-22px);
 }
 button.btn {
-  background-color: #000;
-  border: #64ffda 1px solid;
-  color: #64ffda;
-  font-size: 0.9rem;
-  padding: 7px 12px !important;
-  position: relative;
-  bottom: 5px;
+  font-size: 1rem;
+  padding: 0.3rem 2rem;
+  border-radius: 24px;
   transition: all 0.5s linear;
+  box-shadow: 0px 8px 16px 0px rgba(17, 69, 59, 0.20);
 }
-button.btn:hover {
-  background-color: #191919;
+/* .btn1:nth-of-type(1) {
+  margin-left: 3rem;
+} */
+.btn1 {
+  background-color: #FFF;
+  border: #11453B 1px solid;
+  color: #11453B;
 }
-li:nth-of-type(1) {
-  animation: enter 0.4s linear forwards;
+.btn.mobile-btn {
+  margin-left: 0;
 }
-li:nth-of-type(2) {
-  animation: enter 0.8s linear forwards;
-}
-li:nth-of-type(3) {
-  animation: enter 1.2s linear forwards;
-}
-li:nth-of-type(4) {
-  animation: enter 1.6s linear forwards;
-}
-li:nth-of-type(5) {
-  animation: enter 2.0s linear forwards;
-}
-@keyframes enter {
-  from {
-    transform: translateY(-50px);
-  }
-  to {
-    transform: translateY(0px);
-  }
+.btn2 {
+  background-color: #11453B !important;
+  border: #11453B 1px solid;
+  color: #FFF;
 }
 @media (min-width: 769px) {
     aside {
         display: none;
     }
 }
-@media (max-width: 820px) {
-    nav {
-        padding-top: 3%;
-    }
+@media (max-width: 992px) {
+  /* .navi-items {
+    left: 8rem;
+  } */
+  .btn1:nth-of-type(1) {
+    margin-left: 1rem;
+  }
 }
 @media (min-width: 820px) {
   .blur-bg {
     backdrop-filter: blur(3px);
-    background-color: rgba(10, 25, 47, 0.1);
+    /* background-color: rgba(10, 25, 47, 0.1); */
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 868px) {
+  .navbar-brand img {
+    width: 7rem;
+  }
   ul.navbar-navi {
     display: none;
+  }
+  div.buttons {
+    display: none !important;
   }
   button.navbar-toggle {
     display: block;
     margin-right: 10px;
     z-index: 11;
+    width: 1.5rem;
+    height: 1.5rem;
   }
   .toggler-icon {
     display: block;
@@ -336,19 +340,11 @@ li:nth-of-type(5) {
     background-color: rgba(10, 25, 47, 1);
   } */
 }
-@media (max-width: 500px) {
-    a img {
-        margin-left: 10px !important;
-        margin-top: 10px !important	;
-        z-index: 12 !important	;
-        width: 50px !important;
-    }
-}
 @media (max-height: 700px) {
   aside {
     padding: 80px 10px 25px;
   }
-  aside a {
+  aside .navbar-link {
     padding-top: 20px;
   }
 }
