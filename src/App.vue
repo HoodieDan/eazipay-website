@@ -29,6 +29,10 @@
         <Subscribe></Subscribe>
       </div>
 
+      <!-- <div class="">
+        <CallToAction></CallToAction>
+      </div> -->
+
       <div>
         <FootingSection></FootingSection>
       </div>
@@ -43,6 +47,7 @@ import FeatureSection from './components/FeatureSection.vue'
 import HowItWorks from './components/HowItWorks.vue'
 import Subscribe from './components/Subscribe.vue';
 import FootingSection from './components/FootingSection.vue';
+import CallToAction from './components/CallToAction.vue';
 
 export default {
   name: 'App',
@@ -69,7 +74,8 @@ export default {
     FeatureSection,
     HowItWorks,
     Subscribe,
-    FootingSection
+    FootingSection,
+    CallToAction
 }
 }
 </script>

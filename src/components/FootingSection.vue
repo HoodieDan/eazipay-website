@@ -14,14 +14,14 @@
                         </div>
 
                         <div class="social-networks">
-                            <img src="../assets/images/instagram.png" class="me-4" alt="instagram logo">
-                            <img src="../assets/images/twitter.png" class="me-4" alt="twitter logo">
+                            <img src="../assets/images/Instagram.png" class="me-4" alt="instagram logo">
+                            <img src="../assets/images/Twitter.png" class="me-4" alt="twitter logo">
                             <img src="../assets/images/linkedin.png" class="me-4" alt="linkedin logo">
                             <img src="../assets/images/facebook.png" class="me-4" alt="facebook logo">
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-3 col-6 flex-col">
-                        <h4 class="mb-3">PRODUCT</h4>
+                        <h4 class="mb-3">Product</h4>
                         <router-link to="#" class="link">Individual</router-link>
                         <router-link to="#" class="link">Businesses</router-link>
                         <router-link to="#" class="link">Request Demo</router-link>
