@@ -100,7 +100,7 @@ div.cards {
     transform: translateX(38rem);
 }
 .card2:hover + .card3 {
-    transform: translateX(45rem);
+    transform: translateX(43rem);
 }
 .card2 {
     z-index: 2;
@@ -110,7 +110,7 @@ div.cards {
     transform: translateX(15rem);
 }
 .card1:hover + .card2 {
-    transform: translateX(25rem);
+    transform: translateX(23rem);
 }
 .card1:hover {
     transform: translateX(-5rem);
@@ -148,7 +148,8 @@ div.cards {
         transform: translateX(-0);
     }
     .wave {
-        display: none;
+        /* display: none; */
+        object-fit: cover;
     }
 }
 @media (max-width: 992px) {
@@ -156,7 +157,7 @@ div.cards {
         color: #11453B;
         background-color: #fff;
         box-shadow: 0px 20px 48px 0px rgba(170, 170, 170, 0.29);
-        padding: 2rem 3rem;
+        padding: 1.5rem 3rem;
     }
 }
 </style>

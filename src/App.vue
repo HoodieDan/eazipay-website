@@ -9,8 +9,9 @@
         </NavBar>
       </div>
 
-      <img src="./assets/images/blob.png" class="blob1" alt="blob">
-      <img src="./assets/images/blob.png" class="blob2" alt="blob">
+      <img src="./assets/images/blob.png" class="blob blob1" alt="blob">
+      <img src="./assets/images/blob.png" class="blob blob2" alt="blob">
+      <img src="./assets/images/blob.png" class="blob blob3" alt="blob">
 
       <!-- Hero section -->
       <div class="mt-5">
@@ -83,11 +84,35 @@ export default {
 <style scoped>
 .blob1 {
   position: absolute;
-  width: 20rem;
+  top: 0;
+  width: 25rem;
 }
 .blob2 {
   position: absolute;
   right: 0rem;
+  top: 0;
+  width: 25rem;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.blob3 {
+  position: absolute;
   width: 20rem;
+  top: 25rem;
+  left: 0;
+  transform: rotate(270deg);
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .blob {
+    width: 10rem;
+    height: 15rem;
+  }
+  .blob1, .blob2 {
+    top: 0;
+  }
+  /* .blob3 {
+    left: 40%;
+  } */
 }
 </style>

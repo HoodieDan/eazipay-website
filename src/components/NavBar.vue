@@ -210,6 +210,7 @@ button.navbar-toggle {
   width: 30px;
   height: 30px;
   z-index: 1000;
+  background: url('../assets/images/blob.png');
 }
 span.top-bar {
   margin-top: -10px;

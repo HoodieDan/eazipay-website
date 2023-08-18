@@ -7,7 +7,15 @@
 
             <div class="col-lg-6 p-5">
                 <div class="onboard-bg px-2">
-                    <img src="../assets/images/step3.gif" class="img-fluid" alt="onboarding image">
+                    <div class="gif" v-if="stage == 1" v-motion-pop>
+                        <img src="../assets/images/step1.gif" class="img-fluid" alt="onboarding image">
+                    </div>
+                    <div class="gif" v-if="stage == 2">
+                        <img src="../assets/images/step2.gif" class="img-fluid" alt="onboarding image" v-motion-pop>
+                    </div>
+                    <div class="gif" v-if="stage == 3">
+                        <img src="../assets/images/step3.gif" class="img-fluid" alt="onboarding image" v-motion-pop>
+                    </div>
                 </div>
             </div>
 
@@ -21,10 +29,10 @@
                         <defs>
                             <linearGradient id="left-to-right">
                                 <stop offset="0" stop-color="#11453B">
-                                    <animate dur="4s" attributeName="offset" from="0" to="1" id="myLoop" />
+                                    <animate dur="10s" attributeName="offset" from="0" to="1" id="myLoop" />
                                 </stop>
                                 <stop offset="0" stop-color="#D9EBCD">
-                                    <animate dur="4s" attributeName="offset" from="0" to="1" />
+                                    <animate dur="10s" attributeName="offset" from="0" to="1" />
                                 </stop>
                             </linearGradient>
                         </defs>
@@ -142,7 +150,7 @@ export default {
                 } else {
                     this.stage = 1;
                 }
-            }, 4000)
+            }, 10000)
         },
         changeStage(number) {
             this.stage = number;
@@ -166,8 +174,15 @@ h3 {
     align-items: center;
     justify-content: center;
 }
-.onboard-bg img {
+/* .onboard-bg img {
     width: 65%;
+    border-radius: 56px;
+} */
+.gif {
+    width: 65%;
+}
+.gif img {
+    width: 100%;
     border-radius: 56px;
 }
 .step {
@@ -223,6 +238,10 @@ h3.num {
 .mobile {
     display: none;
 }
+/* .gif {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+} */
 @media(max-width: 1365px) {
     svg {
         display: none;
@@ -252,10 +271,14 @@ h3.num {
         position: relative;
         left: 0;
         top: 0;
+        transform: scale(0.7);
     }
 }
 @media (max-width: 575px) {
-    .onboard-bg img {
+    /* .onboard-bg img {
+        border-radius: 32px;
+    } */
+    .gif img {
         border-radius: 32px;
     }
 }

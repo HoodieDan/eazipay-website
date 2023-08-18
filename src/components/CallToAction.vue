@@ -168,5 +168,8 @@ input:active {
     .left {
         padding: 3rem 2rem 1rem !important;
     }
+    .about-card {
+        border-radius: 16px;
+    }
 }
 </style>
