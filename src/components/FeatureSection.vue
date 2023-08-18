@@ -123,6 +123,14 @@ div.cards {
     padding-top: 23rem;
     width: 70%;
 }
+@media (min-width: 1367px) {
+    .card2:hover + .card3 {
+        transform: translateX(46rem);
+    }
+    .card2:hover {
+        transform: translateX(12rem);
+    }
+}
 @media (max-width: 1024px) {
     .green-card {
         width: 100%;

@@ -22,14 +22,14 @@
             <div class="col-lg-6 p-5 desktop">
 
                 <div class="step step1">
-                    <div class="number" :class="{ 'active': stage === 1 }" @click="changeStage(1)">
+                    <div class="number" id="startButton1" :class="{ 'active': stage === 1 }" @click="changeStage(1)">
                         <h3 class="num">1</h3>
                     </div>
                     <svg width="50" height="200" viewBox="0 0 50 222" fill="#D9EBCD" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="left-to-right" x1="0%" y1="0%" x2="0" y2="100%">
                                 <stop offset="0" stop-color="#11453B">
-                                    <animate dur="10s" attributeName="offset" from="0" to="1" id="myLoop" begin="0s;myLoop3.end" />
+                                    <animate dur="10s" attributeName="offset" from="0" to="1" id="myLoop" begin="0s;myLoop3.end;startButton1.click" />
                                 </stop>
                                 <stop offset="0" stop-color="#D9EBCD">
                                     <animate dur="10s" attributeName="offset" from="0" to="1" />
@@ -51,14 +51,14 @@
                 </div>
 
                 <div class="step step2">
-                    <div class="number" :class="{ 'active': stage === 2 }" @click="changeStage(2)">
+                    <div class="number" id="startButton2" :class="{ 'active': stage === 2 }" @click="changeStage(2)">
                         <h3 class="num">2</h3>
                     </div>
                     <svg width="302" height="245" viewBox="0 0 302 245" fill="#D9EBCD" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="left-two-right" x1="0%" y1="0%" x2="0" y2="100%">
                                 <stop offset="0" stop-color="#11453B">
-                                    <animate dur="10s" attributeName="offset" from="0" to="1" id="myLoop2" begin="10s;myLoop.end" />
+                                    <animate dur="10s" attributeName="offset" from="0" to="1" id="myLoop2" begin="10s;myLoop.end;startButton2.click" />
                                 </stop>
                                 <stop offset="0" stop-color="#D9EBCD">
                                     <animate dur="10s" attributeName="offset" from="0" to="1" begin="10s" />
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="step step3">
-                    <div class="number" :class="{ 'active': stage === 3 }" @click="changeStage(3)">
+                    <div class="number" id="startButton3" :class="{ 'active': stage === 3 }" @click="changeStage(3)">
                         <h3 class="num">3</h3>
                     </div>
 
@@ -87,7 +87,7 @@
                         <defs>
                             <linearGradient id="left-three-right" x1="0%" y1="0%" x2="0" y2="100%">
                                 <stop offset="0" stop-color="#11453B">
-                                    <animate dur="10s" attributeName="offset" from="0" to="1" id="myLoop3" begin="20s;myLoop2.end" />
+                                    <animate dur="10s" attributeName="offset" from="0" to="1" id="myLoop3" begin="20s;myLoop2.end;startButton3.click" />
                                 </stop>
                                 <stop offset="0" stop-color="#D9EBCD">
                                     <animate dur="10s" attributeName="offset" from="0" to="1" begin="20s" />
@@ -263,6 +263,11 @@ h3.num {
     opacity: 1 !important;
     transform: scale(1) !important;
 } */
+@media (min-width: 1367px) {
+    .step2 svg {
+        right: 10rem;
+    }
+}
 @media(max-width: 1365px) {
     svg {
         display: none;
