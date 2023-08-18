@@ -155,6 +155,9 @@ input:active {
 .demo {
     border-radius: 32px;
 }
+.demo:hover {
+  animation: bounce 1s ease-in-out forwards;
+}
 @media (max-width: 992px) {
     .cta-dots {
         top: -5rem;

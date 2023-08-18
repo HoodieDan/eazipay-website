@@ -49,11 +49,15 @@ h2 {
     width: 12rem;
     border-radius: 9px;
     box-shadow: 0px 20px 48px 0px rgba(170, 170, 170, 0.29);
+    cursor: pointer;
 }
 .sub-dots {
     position: absolute;
     top: 0;
     left: 1rem;
+}
+.download-links img:hover {
+  animation: bounce 1s ease-in-out forwards;
 }
 @media (max-width: 992px) {
     .col-lg-6 {

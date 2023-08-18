@@ -140,7 +140,7 @@ aside {
   text-align: center;
   transform: translateX(1000px);
   z-index: 10;
-  padding: 80px 10px;
+  padding: 6rem 1rem;
   transition: transform 0.5s linear;
   animation: show 0.5s linear forwards;
 }
@@ -281,6 +281,11 @@ button.btn {
   transition: all 0.5s linear;
   box-shadow: 0px 8px 16px 0px rgba(17, 69, 59, 0.20);
   cursor: pointer;
+  z-index: 100;
+}
+
+.btn:hover {
+  animation: bounce 1s ease-in-out forwards;
 }
 /* .btn1:nth-of-type(1) {
   margin-left: 3rem;
@@ -298,7 +303,7 @@ button.btn {
   border: #11453B 1px solid;
   color: #FFF;
 }
-@media (min-width: 769px) {
+@media (min-width: 869px) {
     aside {
         display: none;
     }
@@ -343,11 +348,11 @@ button.btn {
   } */
 }
 @media (max-height: 700px) {
-  aside {
-    padding: 80px 10px 25px;
-  }
+  /* aside {
+    padding: 6rem 1rem 4rem;
+  } */
   aside .navbar-link {
-    padding-top: 20px;
+    padding-top: 1rem;
   }
 }
 </style>

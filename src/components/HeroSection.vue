@@ -48,6 +48,11 @@ p.summary {
     width: 12rem;
     border-radius: 9px;
     box-shadow: 0px 20px 48px 0px rgba(170, 170, 170, 0.29);
+    cursor: pointer;
+}
+.btn:hover,
+.download-links img:hover {
+  animation: bounce 1s ease-in-out forwards;
 }
 @media (min-width: 1024px) {
     .hero-bg {
