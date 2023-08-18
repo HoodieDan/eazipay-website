@@ -281,5 +281,8 @@ h3.num {
     .gif img {
         border-radius: 32px;
     }
+    .col-lg-6.p-5 {
+        padding-top: 1rem !important;
+    }
 }
 </style>

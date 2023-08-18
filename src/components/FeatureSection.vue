@@ -1,43 +1,45 @@
 <template>
-    <div class="bg-pattern">
-        <img src="../assets/images/wave.png" class="wave" alt="wave">
+    <div class="wave-bg">
+        <div class="bg-pattern">
+            <img src="../assets/images/wave.png" class="wave" alt="wave">
 
-        <div class="container text-center mt-5">
-        <h2>For Individuals and Businesses</h2>
-        <p class="grey mb-5">Join 200+ businesses using Eazipay's easy solution.</p>
+            <div class="container text-center mt-5">
+                <h2>For Individuals and Businesses</h2>
+                <p class="grey mb-5">Join 200+ businesses using Eazipay's easy solution.</p>
 
-        <div class="cards">
+                <div class="cards">
 
-            <div class="green-card card1">
-                <h3>Tamper-proof Payroll for Life</h3>
+                    <div class="green-card card1">
+                        <h3>Tamper-proof Payroll for Life</h3>
 
-                <p>Your staff payroll history is kept in one place forever.</p>
-                <p>No more excel sheet or manual records.</p>
-                <p>Download your payroll history anytime you need it.</p>
+                        <p>Your staff payroll history is kept in one place forever.</p>
+                        <p>No more excel sheet or manual records.</p>
+                        <p>Download your payroll history anytime you need it.</p>
+                    </div>
+
+                    <div class="green-card card2">
+                        <h3>All Payroll, Anytime Anywhere</h3>
+
+                        <p>Wherever you are, Eazipay has got you covered on ALL your Payroll tasks.</p>
+                        <p>Whether it is Taxes, Pension insurances HMOs, trustfunds, Eazipay handle all your compliances in one place and easily, in seconds!</p>
+                    </div>
+
+                    <div class="green-card card3">
+                        <h3>Payroll in Seconds</h3>
+
+                        <p>Never again will you spend more than 2 minutes on payroll.</p>
+                        <p>Just click on your staff and bulk-pay them at once.</p>
+                        <p>Payment is done permanently.</p>
+                    </div>
+
+                </div>
+
+                <div class="query">
+                    <p class="text-center">We are happy to answer your queries. Please, reach us at <a href="mailto:hi@eazypay.com" class="red"> hi@myeazipay.com </a> and expect our response shortly after.</p>
+                </div>
+
             </div>
-
-            <div class="green-card card2">
-                <h3>All Payroll, Anytime Anywhere</h3>
-
-                <p>Wherever you are, Eazipay has got you covered on ALL your Payroll tasks.</p>
-                <p>Whether it is Taxes, Pension insurances HMOs, trustfunds, Eazipay handle all your compliances in one place and easily, in seconds!</p>
-            </div>
-
-            <div class="green-card card3">
-                <h3>Payroll in Seconds</h3>
-
-                <p>Never again will you spend more than 2 minutes on payroll.</p>
-                <p>Just click on your staff and bulk-pay them at once.</p>
-                <p>Payment is done permanently.</p>
-            </div>
-
         </div>
-
-        <div class="query">
-            <p class="text-center">We are happy to answer your queries. Please, reach us at <a href="mailto:hi@eazypay.com" class="red"> hi@myeazipay.com </a> and expect our response shortly after.</p>
-        </div>
-
-    </div>
     </div>
 </template>
 <script>
@@ -161,8 +163,9 @@ div.cards {
     }
 }
 @media (max-width: 575px) {
-    .wave {
-        transform: scale(1.1);
+    .wave-bg {
+        background: url('../assets/images/wave.png');
+        background-size: cover;
     }
 }
 </style>
