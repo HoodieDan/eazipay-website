@@ -112,7 +112,7 @@ export default {
     top: 0;
   }
   .blob3 {
-    top: 28rem;
+    top: 30rem;
   }
 }
 </style>
