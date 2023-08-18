@@ -1,5 +1,5 @@
 <template>
-    <div class="wave-bg">
+    <div class="wave-bg pb-5">
         <div class="bg-pattern">
             <img src="../assets/images/wave.png" class="wave" alt="wave">
 
