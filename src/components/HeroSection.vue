@@ -76,6 +76,9 @@ p.summary {
     }
 }
 @media (max-width: 575px) {
+    h1 {
+        font-size: 3rem;
+    }
     .download-links img {
         width: 8rem;
     }

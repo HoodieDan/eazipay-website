@@ -11,7 +11,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 p-5">
+            <div class="col-lg-6 p-5 desktop">
 
                 <div class="step step1">
                     <div class="number" :class="{ 'active': stage === 1 }" @click="changeStage(1)">
@@ -79,6 +79,43 @@
                     </div>
                 </div>
 
+            </div>
+
+            <div class="mobile text-center col-lg-6">
+                <div class="stage-details">
+                    <div class="stage1" v-if="stage === 1" v-motion-pop>
+                        <div class="">
+                            <h4 class="gold">step 1</h4>
+                            <h5 class="mb-2 green ms-3">Create your free account</h5>
+                        </div>
+                        <p class="grey">Click here to set up your Eazipay account.</p>
+                    </div>
+                    <div class="stage2" v-if="stage === 2" v-motion-pop>
+                        <div class="">
+                            <h4 class="gold">step 2</h4>
+                            <h5 class="mb-2 green ms-3">Add Employee Data</h5>
+                        </div>
+                        <p class="grey">Your Employee information is 100% safe and secure.</p>
+                    </div>
+                    <div class="stage3" v-if="stage === 3" v-motion-pop>
+                        <div class="">
+                            <h4 class="gold">step 3</h4>
+                            <h5 class="mb-2 green ms-3">Prepare your transaction</h5>
+                        </div>
+                        <p class="grey">Run payroll: Bulk Salaries and Compliance are done at once!</p>
+                    </div>
+                </div>
+                <div class="stages d-flex">
+                    <div class="number mx-2" :class="{ 'active': stage === 1 }" @click="changeStage(1)">
+                        <h3 class="num">1</h3>
+                    </div>
+                    <div class="number mx-2" :class="{ 'active': stage === 2 }" @click="changeStage(2)">
+                        <h3 class="num">2</h3>
+                    </div>
+                    <div class="number mx-2" :class="{ 'active': stage === 3 }" @click="changeStage(3)">
+                        <h3 class="num">3</h3>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -183,6 +220,9 @@ h3.num {
 .shorten {
     width: 80%;
 }
+.mobile {
+    display: none;
+}
 @media(max-width: 1365px) {
     svg {
         display: none;
@@ -197,6 +237,26 @@ h3.num {
     .detail {
         margin: auto 1rem;
         padding-top: 0;
+    }
+}
+@media (max-width: 992px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display:flex;
+        flex-direction: column;
+        align-items: center ;
+    }
+    div.number {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+}
+@media (max-width: 575px) {
+    .onboard-bg img {
+        border-radius: 32px;
     }
 }
 </style>

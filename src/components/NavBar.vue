@@ -288,8 +288,8 @@ button.btn {
   border: #11453B 1px solid;
   color: #11453B;
 }
-.btn.mobile-btn {
-  margin-left: 0;
+.mobile-btn {
+  margin-left: 0 !important;
 }
 .btn2 {
   background-color: #11453B !important;

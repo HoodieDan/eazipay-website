@@ -127,6 +127,7 @@ div.cards {
         position: relative;
         margin-bottom: 1.5rem;
         transform: translateX(0);
+        height: auto;
     }
     .query {
         padding-top: 3rem;
@@ -145,6 +146,17 @@ div.cards {
     }
     .card1:hover {
         transform: translateX(-0);
+    }
+    .wave {
+        display: none;
+    }
+}
+@media (max-width: 992px) {
+    .green-card {
+        color: #11453B;
+        background-color: #fff;
+        box-shadow: 0px 20px 48px 0px rgba(170, 170, 170, 0.29);
+        padding: 2rem 3rem;
     }
 }
 </style>

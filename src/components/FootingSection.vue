@@ -41,8 +41,8 @@
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-3 col-6 flex-col">
                         <h4 class="mb-3">Contact Us</h4>
-                        <router-link to="#" class="link">Eazipay@gmail.com</router-link>
-                        <router-link to="#" class="link">+234 816 878 9518</router-link>
+                        <a href="mailto:eazipay@gmail.com" class="link">eazipay@gmail.com</a>
+                        <a href="tel:+234 816 878 9518" class="link">+234 816 878 9518</a>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@ p {
     font-size: 0.8rem;
     color: #7C7C7C;
     margin-bottom: 1rem;
-    transform: all 0.3s ease-in-out;
+    transition: all 0.4s ease-out;
     cursor: pointer;
 }
 .link:hover {

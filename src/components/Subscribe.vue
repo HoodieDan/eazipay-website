@@ -13,7 +13,7 @@
                         <img src="../assets/images/appstore.png" alt="app store download link" class="img-fluid">
                     </div>
                 </div>
-                <div class="col-lg-6 p-5">
+                <div class="col-lg-6 p-5 sub-div">
                     <img src="../assets/images/sub.png" class="img-fluid sub" alt="subscribe">
                 </div>
             </div>
@@ -66,6 +66,12 @@ h2 {
 @media (max-width: 575px) {
     .download-links img {
         width: 8rem;
+    }
+    .sub-div {
+        padding: 1rem !important;
+    }
+    .container {
+        padding: 1.5rem !important;
     }
 }
 </style>
