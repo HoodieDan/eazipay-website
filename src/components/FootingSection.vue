@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="footer-middle py-5">
+        <div class="footer py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 company-info">
@@ -58,6 +58,9 @@ export default {
 </script>
 
 <style scoped>
+.footer {
+    border-top: #EAEAEA 1px solid;
+}
 h2 {
     font-weight: 500;
     font-size: 3rem;

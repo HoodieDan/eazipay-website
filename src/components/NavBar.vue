@@ -280,6 +280,7 @@ button.btn {
   border-radius: 24px;
   transition: all 0.5s linear;
   box-shadow: 0px 8px 16px 0px rgba(17, 69, 59, 0.20);
+  cursor: pointer;
 }
 /* .btn1:nth-of-type(1) {
   margin-left: 3rem;

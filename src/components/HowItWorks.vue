@@ -27,9 +27,9 @@
                     </div>
                     <svg width="50" height="200" viewBox="0 0 50 222" fill="#D9EBCD" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <linearGradient id="left-to-right">
+                            <linearGradient id="left-to-right" x1="0%" y1="0%" x2="0" y2="100%">
                                 <stop offset="0" stop-color="#11453B">
-                                    <animate dur="10s" attributeName="offset" from="0" to="1" id="myLoop" />
+                                    <animate dur="10s" attributeName="offset" from="0" to="1" id="myLoop" begin="0s;myLoop3.end" />
                                 </stop>
                                 <stop offset="0" stop-color="#D9EBCD">
                                     <animate dur="10s" attributeName="offset" from="0" to="1" />
@@ -56,16 +56,16 @@
                     </div>
                     <svg width="302" height="245" viewBox="0 0 302 245" fill="#D9EBCD" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <linearGradient id="green-fill">
+                            <linearGradient id="left-two-right" x1="0%" y1="0%" x2="0" y2="100%">
                                 <stop offset="0" stop-color="#11453B">
-                                    <animate dur="4s" attributeName="offset" from="0" to="1" id="myLoop" />
+                                    <animate dur="10s" attributeName="offset" from="0" to="1" id="myLoop2" begin="10s;myLoop.end" />
                                 </stop>
                                 <stop offset="0" stop-color="#D9EBCD">
-                                    <animate dur="4s" attributeName="offset" from="0" to="1" />
+                                    <animate dur="10s" attributeName="offset" from="0" to="1" begin="10s" />
                                 </stop>
                             </linearGradient>
                         </defs>
-                        <path d="M22.281 234C22.281 239.891 17.5054 244.667 11.6144 244.667C5.72336 244.667 0.947723 239.891 0.947723 234C0.947723 228.109 5.72336 223.333 11.6144 223.333C17.5054 223.333 22.281 228.109 22.281 234ZM11.6144 0H275.614V4H11.6144V0ZM301.614 26V210H297.614V26H301.614ZM275.614 236H11.6144V232H275.614V236ZM301.614 210C301.614 224.359 289.974 236 275.614 236V232C287.765 232 297.614 222.15 297.614 210H301.614ZM275.614 0C289.974 0 301.614 11.6406 301.614 26H297.614C297.614 13.8497 287.765 4 275.614 4V0Z" fill="#url(green-fill)"/>
+                        <path d="M22.281 234C22.281 239.891 17.5054 244.667 11.6144 244.667C5.72336 244.667 0.947723 239.891 0.947723 234C0.947723 228.109 5.72336 223.333 11.6144 223.333C17.5054 223.333 22.281 228.109 22.281 234ZM11.6144 0H275.614V4H11.6144V0ZM301.614 26V210H297.614V26H301.614ZM275.614 236H11.6144V232H275.614V236ZM301.614 210C301.614 224.359 289.974 236 275.614 236V232C287.765 232 297.614 222.15 297.614 210H301.614ZM275.614 0C289.974 0 301.614 11.6406 301.614 26H297.614C297.614 13.8497 287.765 4 275.614 4V0Z" fill="url(#left-two-right)"/>
                         <mask id="mask0_2797_493" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="302" height="245">
                         <path d="M22.281 234C22.281 239.891 17.5054 244.667 11.6144 244.667C5.72336 244.667 0.947723 239.891 0.947723 234C0.947723 228.109 5.72336 223.333 11.6144 223.333C17.5054 223.333 22.281 228.109 22.281 234ZM11.6144 0H275.614V4H11.6144V0ZM301.614 26V210H297.614V26H301.614ZM275.614 236H11.6144V232H275.614V236ZM301.614 210C301.614 224.359 289.974 236 275.614 236V232C287.765 232 297.614 222.15 297.614 210H301.614ZM275.614 0C289.974 0 301.614 11.6406 301.614 26H297.614C297.614 13.8497 287.765 4 275.614 4V0Z" fill="#D9EBCD"/>
                         </mask>
@@ -81,6 +81,27 @@
                     <div class="number" :class="{ 'active': stage === 3 }" @click="changeStage(3)">
                         <h3 class="num">3</h3>
                     </div>
+
+                    <!-- 3 svg with no display -->
+                    <svg width="50" height="200" viewBox="0 0 50 222" fill="#D9EBCD" class="d-none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="left-three-right" x1="0%" y1="0%" x2="0" y2="100%">
+                                <stop offset="0" stop-color="#11453B">
+                                    <animate dur="10s" attributeName="offset" from="0" to="1" id="myLoop3" begin="20s;myLoop2.end" />
+                                </stop>
+                                <stop offset="0" stop-color="#D9EBCD">
+                                    <animate dur="10s" attributeName="offset" from="0" to="1" begin="20s" />
+                                </stop>
+                            </linearGradient>
+                        </defs>
+                        <path d="M27.9477 211C27.9477 216.891 32.7233 221.667 38.6144 221.667C44.5054 221.667 49.281 216.891 49.281 211C49.281 205.109 44.5054 200.333 38.6144 200.333C32.7233 200.333 27.9477 205.109 27.9477 211ZM38.6144 0H26.6144V4H38.6144V0ZM0.61438 26V187H4.61438V26H0.61438ZM26.6144 213H38.6144V209H26.6144V213ZM0.61438 187C0.61438 201.359 12.255 213 26.6144 213V209C14.4641 209 4.61438 199.15 4.61438 187H0.61438ZM26.6144 0C12.255 0 0.61438 11.6406 0.61438 26H4.61438C4.61438 13.8497 14.4641 4 26.6144 4V0Z" fill="url(#left-three-right)"/>
+                        <mask id="mask0_2797_462" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="50" height="222">
+                        <path d="M27.9477 211C27.9477 216.891 32.7233 221.667 38.6144 221.667C44.5054 221.667 49.281 216.891 49.281 211C49.281 205.109 44.5054 200.333 38.6144 200.333C32.7233 200.333 27.9477 205.109 27.9477 211ZM38.6144 0H26.6144V4H38.6144V0ZM0.61438 26V187H4.61438V26H0.61438ZM26.6144 213H38.6144V209H26.6144V213ZM0.61438 187C0.61438 201.359 12.255 213 26.6144 213V209C14.4641 209 4.61438 199.15 4.61438 187H0.61438ZM26.6144 0C12.255 0 0.61438 11.6406 0.61438 26H4.61438C4.61438 13.8497 14.4641 4 26.6144 4V0Z" fill="#D9EBCD"/>
+                        </mask>
+                        <g mask="url(#mask0_2797_462)">
+                        <rect x="47.6144" y="-6" width="5" height="13" fill="#11453B"/>
+                        </g>
+                    </svg>
                     <div class="ps-3 detail">
                         <h5 class="mb-2">Prepare your transaction</h5>
                         <p class="grey shorten">Run payroll: Bulk Salaries and Compliance are done at once!</p>

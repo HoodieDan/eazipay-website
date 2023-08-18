@@ -1,5 +1,5 @@
 <template>
-    <div class="cta">
+    <div class="cta pt-5 pb-5">
         <img src="../assets/images/cta-dots.png" class="cta-dots" alt="dots">
         <div class="container">
             <div class="row mt-3 mb-3">
@@ -78,6 +78,9 @@ export default {
 <style scoped>
 div.cta {
     position: relative;
+    background-image: url('../assets/images/cta-bg.png');
+    background-repeat: no-repeat;
+    background-position: 100% 0;
 }
 h2 {
     font-size: 3rem;
@@ -109,6 +112,7 @@ div.right {
     box-shadow: 0px 20px 48px 0px rgba(170, 170, 170, 0.29);
     padding: 2rem 3rem;
     border-radius: 8px;
+    z-index: 1;
 }
 .menu {
     border: 1px solid #E7E8E7;
@@ -173,6 +177,9 @@ input:active {
     }
     p.deet {
         width: 100%;
+    }
+    .cta {
+        background-size: 50%;
     }
 }
 @media (max-width: 575px) {

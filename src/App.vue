@@ -30,7 +30,7 @@
         <Subscribe></Subscribe>
       </div>
 
-      <div class="mt-5 mb-5">
+      <div class="">
         <CallToAction></CallToAction>
       </div>
 
@@ -111,8 +111,8 @@ export default {
   .blob1, .blob2 {
     top: 0;
   }
-  /* .blob3 {
-    left: 40%;
-  } */
+  .blob3 {
+    top: 28rem;
+  }
 }
 </style>
