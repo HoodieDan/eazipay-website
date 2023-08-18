@@ -284,5 +284,8 @@ h3.num {
     .col-lg-6.p-5 {
         padding-top: 1rem !important;
     }
+    h3 {
+        font-size: 2rem;
+    }
 }
 </style>

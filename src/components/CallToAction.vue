@@ -171,5 +171,14 @@ input:active {
     .about-card {
         border-radius: 16px;
     }
+    p.deet {
+        width: 100%;
+    }
+}
+@media (max-width: 575px) {
+    .cta-dots {
+        width: 5rem;
+        top: -1rem;
+    }
 }
 </style>

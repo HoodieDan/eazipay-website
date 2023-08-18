@@ -64,6 +64,12 @@ h2 {
     }
 }
 @media (max-width: 575px) {
+    h2 {
+        margin-top: 0 !important;
+    }
+    .sub-dots {
+        width: 4.5rem;
+    }
     .download-links img {
         width: 8rem;
     }
