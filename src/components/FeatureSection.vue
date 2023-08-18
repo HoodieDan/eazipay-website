@@ -160,4 +160,9 @@ div.cards {
         padding: 1.5rem 3rem;
     }
 }
+@media (max-width: 575px) {
+    .wave {
+        transform: scale(1.1);
+    }
+}
 </style>
