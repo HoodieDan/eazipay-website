@@ -267,6 +267,9 @@ h3.num {
     .step2 svg {
         right: 10rem;
     }
+    .shorten {
+        width: 60%;
+    }
 }
 @media(max-width: 1365px) {
     svg {
