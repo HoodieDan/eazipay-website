@@ -164,7 +164,7 @@ export default {
     },
     methods: {
         nextStage() {
-            if (document.readyState === 'interactive') {
+            window.addEventListener('load', () => {
                 setInterval(() => {
                     if (this.stage === 1) {
                         this.stage = 2;
@@ -174,7 +174,7 @@ export default {
                         this.stage = 1;
                     }
                 }, 10000)
-            }
+            })
         },
         changeStage(number) {
             this.stage = number;
