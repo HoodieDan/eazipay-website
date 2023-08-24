@@ -160,7 +160,6 @@ export default {
     },
     mounted() {
         this.nextStage();
-        console.log(document.readyState);
     },
     methods: {
         nextStage() {

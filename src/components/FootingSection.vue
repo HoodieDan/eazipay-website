@@ -43,6 +43,10 @@
                         <h4 class="mb-3">Contact Us</h4>
                         <a href="mailto:eazipay@gmail.com" class="link">eazipay@gmail.com</a>
                         <a href="tel:+234 816 878 9518" class="link">+234 816 878 9518</a>
+                        <div class="d-flex email">
+                            <input class="text-field mb-3 mx-0" type="text" name="email" placeholder="Your email address">
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -123,6 +127,35 @@ a {
 .flex-col {
     display: flex;
     flex-direction: column;
+}
+input.text-field {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  /* height: 2.3rem; */
+  background-color: #F2F1F1;
+  font-size: 0.7rem;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  color: #11453B;
+}
+input::placeholder {
+  color: #515251;
+}
+input:focus,
+input:active {
+  outline-color: #11453B;
+}
+.fa-regular {
+    z-index: 2;
+    position: relative;
+    top: 0.6rem;
+    right: 1.7rem;
+    color: #515251;
+    transition: all 0.7s ease-in-out;
+    cursor: pointer;
+}
+.fa-regular:hover {
+    transform: rotateZ(10deg);
 }
 @media (max-width: 992px) {
     .company-info {
