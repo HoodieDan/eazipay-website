@@ -160,18 +160,21 @@ export default {
     },
     mounted() {
         this.nextStage();
+        console.log(document.readyState);
     },
     methods: {
         nextStage() {
-            setInterval(() => {
-                if (this.stage === 1) {
-                    this.stage = 2;
-                } else if (this.stage === 2) {
-                    this.stage = 3;
-                } else {
-                    this.stage = 1;
-                }
-            }, 10000)
+            if (document.readyState === 'interactive') {
+                setInterval(() => {
+                    if (this.stage === 1) {
+                        this.stage = 2;
+                    } else if (this.stage === 2) {
+                        this.stage = 3;
+                    } else {
+                        this.stage = 1;
+                    }
+                }, 10000)
+            }
         },
         changeStage(number) {
             this.stage = number;
